@@ -1,4 +1,4 @@
-FROM alpine:3.5
+FROM alpine:3.6
 
 RUN apk add --no-cache \
     tini \
@@ -12,6 +12,7 @@ RUN apk add --no-cache \
     jq \
     su-exec \
     py-pip \
+    libc6-compat \
     run-parts
 
 ENV BUILDKITE_BUILD_PATH=/buildkite/builds \
